@@ -14,16 +14,13 @@ router.post('/',async(req,res)=>{
         location:req.body.location,
         url:req.body.url
     })
-
-    //try to insert data 
+    // try to insert...
     try{
-    const postToSave = await postData.save()
-    res.send(postToSave)
-
+        const postToSave = await postData.save()
+        res.send(postToSave)
     }catch(err){
-    res.send({message:err})
+        res.send({message:err})
     }
-
 })
 
 module.exports = router
