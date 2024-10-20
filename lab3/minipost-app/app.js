@@ -15,7 +15,7 @@ app.get('/', (req,res) =>{
 })
 
 mongoose.connect(process.env.DB_CONNECTOR, ()=>{
-    console.log('DB is now connected!')
+    console.log('DB is now connected..')
 })
 
 app.listen(3000, ()=>{
